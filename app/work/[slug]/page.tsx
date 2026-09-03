@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -29,11 +29,14 @@ export default async function ProjectPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  if (slug === "instantscripts") redirect("/instantscripts");
   const project = getProject(slug);
   if (!project) notFound();
 
   const currentIndex = projects.findIndex((p) => p.slug === slug);
   const next = projects[(currentIndex + 1) % projects.length];
+  const nextHref =
+    next.slug === "instantscripts" ? "/instantscripts" : `/work/${next.slug}`;
 
   return (
     <>
@@ -102,7 +105,7 @@ export default async function ProjectPage({
               &larr; All work
             </Link>
             <Link
-              href={`/work/${next.slug}`}
+              href={nextHref}
               className="font-body text-[13px] font-medium tracking-wide text-white/70 uppercase hover:text-white"
             >
               Next: {next.title} &rarr;

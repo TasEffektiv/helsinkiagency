@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 const navItems = [
@@ -31,7 +32,12 @@ const sectionOrder = [
   "contactus",
 ];
 
+const innerLogo =
+  "https://www.helsinkiagency.com/wp-content/uploads/2024/04/inner-casestudy-logo.svg";
+
 export default function Header() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState("home");
   const [outgoing, setOutgoing] = useState<string | null>(null);
@@ -39,6 +45,8 @@ export default function Header() {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
+    if (!isHome) return;
+
     function handleScroll() {
       let visible = "home";
       for (const id of sectionOrder) {
@@ -69,7 +77,7 @@ export default function Header() {
       window.removeEventListener("resize", handleScroll);
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-  }, []);
+  }, [isHome]);
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-black/90">
@@ -78,23 +86,34 @@ export default function Header() {
           href="/"
           className="relative z-10 block h-[80px] w-[90px] overflow-hidden nav:absolute nav:top-[62px] nav:left-10 nav:h-[180px] nav:w-[190px]"
         >
-          {Object.entries(sectionLogos).map(([id, src]) => (
+          {isHome ? (
+            Object.entries(sectionLogos).map(([id, src]) => (
+              <Image
+                key={id}
+                src={src}
+                alt="Helsinki Agency"
+                width={208}
+                height={187}
+                className={`absolute inset-0 h-full w-full object-contain transition-transform duration-100 ease-out ${
+                  id === current
+                    ? "translate-x-0"
+                    : id === outgoing
+                      ? "-translate-x-full"
+                      : "translate-x-full"
+                }`}
+                priority={id === "home"}
+              />
+            ))
+          ) : (
             <Image
-              key={id}
-              src={src}
+              src={innerLogo}
               alt="Helsinki Agency"
-              width={208}
-              height={187}
-              className={`absolute inset-0 h-full w-full object-contain transition-transform duration-100 ease-out ${
-                id === current
-                  ? "translate-x-0"
-                  : id === outgoing
-                    ? "-translate-x-full"
-                    : "translate-x-full"
-              }`}
-              priority={id === "home"}
+              width={264}
+              height={258}
+              className="absolute inset-0 h-full w-full object-contain"
+              priority
             />
-          ))}
+          )}
         </Link>
 
         <button

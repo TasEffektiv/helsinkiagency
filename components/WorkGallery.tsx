@@ -10,9 +10,13 @@ function Tile({
   className: string;
 }) {
   const project = getProject(slug)!;
+  const href =
+    project.slug === "instantscripts"
+      ? "/instantscripts"
+      : `/work/${project.slug}`;
   return (
     <Link
-      href={`/work/${project.slug}`}
+      href={href}
       className={`group relative block overflow-hidden ${className}`}
     >
       <span className="absolute top-0 left-0 z-10 bg-hel-orange px-5 py-2.5 text-[15px] font-medium text-white md:text-[18px]">
