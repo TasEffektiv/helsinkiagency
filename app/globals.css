@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-heading: var(--font-montserrat);
+  --font-body: var(--font-roboto);
+
+  --breakpoint-nav: 1080px;
+
+  --color-hel-pink: #d61a9c;
+  --color-hel-pink2: #eb59e0;
+  --color-hel-purple: #831cc6;
+  --color-hel-orange: #ffa300;
+  --color-hel-teal: #24b79b;
+  --color-hel-cyan: #15bee5;
+  --color-hel-green: #53aa53;
+  --color-hel-blue: #1a64e5;
+  --color-hel-dark: #1f1f1f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id],
+div[id],
+footer[id] {
+  scroll-margin-top: 112px;
+}
+
+@media (min-width: 1080px) {
+  section[id],
+  div[id],
+  footer[id] {
+    scroll-margin-top: 170px;
+  }
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+}
+
+::selection {
+  background: var(--color-hel-pink);
+  color: #fff;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
