@@ -35,7 +35,7 @@ export default function ServiceStack() {
   return (
     <div
       ref={ref}
-      className="relative mx-auto mb-14 w-full max-w-[950px] md:mb-20"
+      className="relative isolate mx-auto mb-14 w-full max-w-[950px] overflow-hidden md:mb-20"
       style={{ aspectRatio: "4952 / 3604" }}
     >
       {pieces.map((p) => (
