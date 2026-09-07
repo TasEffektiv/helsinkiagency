@@ -33,10 +33,8 @@ export const projects: Project[] = [
     slug: "yarra-trams-villages",
     title: "Yarra Trams - Villages",
     client: "Yarra Trams",
-    image:
-      "https://www.helsinkiagency.com/wp-content/uploads/2024/04/yarra-trams-villages-thumnail.png",
-    gridImage:
-      "https://www.helsinkiagency.com/wp-content/uploads/2024/04/yarra-trams-villages-thumnail.png",
+    image: "/yarra-trams-villages/yarra-trams-villages-thumnail.png",
+    gridImage: "/yarra-trams-villages/yarra-trams-villages-thumnail.png",
     tagline: "Explore More. Travel by Tram.",
     labelColor: "#FFA300",
     challenge:
@@ -50,10 +48,8 @@ export const projects: Project[] = [
     slug: "lumo-sa",
     title: "Lumo SA - Little World",
     client: "Lumo Energy South Australia",
-    image:
-      "https://www.helsinkiagency.com/wp-content/uploads/2024/04/lumothumnail-image.png",
-    gridImage:
-      "https://www.helsinkiagency.com/wp-content/uploads/2024/04/lumothumnail-image.png",
+    image: "/lumo-sa/lumothumnail-image.png",
+    gridImage: "/lumo-sa/lumothumnail-image.png",
     tagline: "It's a brighter world after all.",
     labelColor: "#FFA300",
     challenge:
@@ -67,10 +63,8 @@ export const projects: Project[] = [
     slug: "modeina-estate",
     title: "Modeina Estate",
     client: "Dennis Family Developments",
-    image:
-      "https://www.helsinkiagency.com/wp-content/uploads/2024/04/modeina-estate-image.png",
-    gridImage:
-      "https://www.helsinkiagency.com/wp-content/uploads/2024/04/modeina-estate-image.png",
+    image: "/modeina-estate/modeina-estate-image.png",
+    gridImage: "/modeina-estate/modeina-estate-image.png",
     tagline: "Elevating Modeina to new heights of style and success.",
     labelColor: "#FFA300",
     challenge:

@@ -10,10 +10,15 @@ function Tile({
   className: string;
 }) {
   const project = getProject(slug)!;
-  const href =
-    project.slug === "instantscripts"
-      ? "/instantscripts"
-      : `/work/${project.slug}`;
+  const dedicatedSlugs = [
+    "instantscripts",
+    "yarra-trams-villages",
+    "modeina-estate",
+    "lumo-sa",
+  ];
+  const href = dedicatedSlugs.includes(project.slug)
+    ? `/${project.slug}`
+    : `/work/${project.slug}`;
   return (
     <Link
       href={href}

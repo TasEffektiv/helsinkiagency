@@ -30,13 +30,23 @@ export default async function ProjectPage({
 }) {
   const { slug } = await params;
   if (slug === "instantscripts") redirect("/instantscripts");
+  if (slug === "yarra-trams-villages") redirect("/yarra-trams-villages");
+  if (slug === "lumo-sa") redirect("/lumo-sa");
+  if (slug === "modeina-estate") redirect("/modeina-estate");
   const project = getProject(slug);
   if (!project) notFound();
 
   const currentIndex = projects.findIndex((p) => p.slug === slug);
   const next = projects[(currentIndex + 1) % projects.length];
-  const nextHref =
-    next.slug === "instantscripts" ? "/instantscripts" : `/work/${next.slug}`;
+  const dedicatedSlugs = [
+    "instantscripts",
+    "yarra-trams-villages",
+    "modeina-estate",
+    "lumo-sa",
+  ];
+  const nextHref = dedicatedSlugs.includes(next.slug)
+    ? `/${next.slug}`
+    : `/work/${next.slug}`;
 
   return (
     <>

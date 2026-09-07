@@ -41,8 +41,8 @@ export default function InstantScriptsPage() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="relative z-10 w-full max-w-[1140px]">
-            <div className="mx-auto max-w-[878px] md:ml-4">
+          <div className="relative z-10 mx-auto w-full max-w-[1160px]">
+            <div className="max-w-[878px]">
               <video
                 className="aspect-video w-full bg-black shadow-2xl"
                 controls
@@ -59,7 +59,7 @@ export default function InstantScriptsPage() {
         </section>
 
         <section className="px-5 pt-14 pb-4 md:pt-20">
-          <div className="mx-auto max-w-[878px]">
+          <div className="mx-auto max-w-[1160px]">
             <h2 className="font-body text-[30px] font-medium text-black md:text-[38px]">
               A campaign with real heart
             </h2>

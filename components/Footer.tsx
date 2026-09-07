@@ -59,11 +59,10 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <Image
-                  src="https://www.helsinkiagency.com/wp-content/uploads/2024/12/instragram.png"
+                  src="/social/instagram.png"
                   alt="Instagram"
                   width={40}
                   height={40}
-                  unoptimized
                 />
               </a>
               <a
@@ -72,11 +71,10 @@ export default function Footer() {
                 rel="noopener noreferrer"
               >
                 <Image
-                  src="https://www.helsinkiagency.com/wp-content/uploads/2024/12/link-din.png"
+                  src="/social/linkedin.png"
                   alt="LinkedIn"
                   width={46}
                   height={39}
-                  unoptimized
                 />
               </a>
             </div>

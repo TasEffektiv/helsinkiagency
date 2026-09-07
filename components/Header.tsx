@@ -14,12 +14,12 @@ const navItems = [
 ];
 
 const sectionLogos: Record<string, string> = {
-  home: "https://www.helsinkiagency.com/wp-content/uploads/2024/04/new-header-logo.png",
-  sisu: "https://www.helsinkiagency.com/wp-content/uploads/2024/04/header-logo1.svg",
-  work: "https://www.helsinkiagency.com/wp-content/uploads/2024/04/header-logo5.svg",
-  services: "https://www.helsinkiagency.com/wp-content/uploads/2024/04/header-logo2.svg",
-  clients: "https://www.helsinkiagency.com/wp-content/uploads/2024/04/header-logo3.svg",
-  contactus: "https://www.helsinkiagency.com/wp-content/uploads/2024/04/header-logo4.svg",
+  home: "/logos/new-header-logo.png",
+  sisu: "/logos/header-logo1.svg",
+  work: "/logos/header-logo5.svg",
+  services: "/logos/header-logo2.svg",
+  clients: "/logos/header-logo3.svg",
+  contactus: "/logos/header-logo4.svg",
 };
 
 const sectionOrder = [
@@ -32,8 +32,7 @@ const sectionOrder = [
   "contactus",
 ];
 
-const innerLogo =
-  "https://www.helsinkiagency.com/wp-content/uploads/2024/04/inner-casestudy-logo.svg";
+const innerLogo = "/logos/inner-casestudy-logo.svg";
 
 export default function Header() {
   const pathname = usePathname();
