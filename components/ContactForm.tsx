@@ -2,12 +2,44 @@
 
 import { useState, type FormEvent } from "react";
 
+function encodeFormData(data: Record<string, string>) {
+  return new URLSearchParams(data).toString();
+}
+
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
+    setError(false);
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data: Record<string, string> = {};
+    formData.forEach((value, key) => {
+      data[key] = value.toString();
+    });
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeFormData(data),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Form submission failed: ${response.status}`);
+      }
+
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (sent) {
@@ -22,7 +54,22 @@ export default function ContactForm() {
     "w-full border border-white bg-white px-6 py-5 font-body text-[14px] font-bold text-[#707070] placeholder-[#707070] placeholder:text-[10px] placeholder:font-bold placeholder:uppercase outline-none focus:text-[#111]";
 
   return (
-    <form onSubmit={handleSubmit} className="w-full">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
+      className="w-full"
+      {...{ netlify: "true" }}
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p className="absolute -left-[9999px] h-px w-px overflow-hidden">
+        <label>
+          Leave this field blank
+          <input name="bot-field" tabIndex={-1} autoComplete="off" />
+        </label>
+      </p>
       <div className="grid grid-cols-1 gap-1.5 md:grid-cols-2">
         <input
           required
@@ -46,6 +93,12 @@ export default function ContactForm() {
           className={`${inputClasses} h-[108px] resize-none md:h-[205px]`}
         />
       </div>
+      {error && (
+        <p className="mt-3 font-body text-[13px] text-red-400">
+          Something went wrong sending your message. Please try again, or
+          email us directly.
+        </p>
+      )}
       <div className="mt-5 flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between md:gap-[30px]">
         <p className="font-body text-[13px] leading-[22px] text-white/80">
           Collection Statement: By providing your personal information (PI),
@@ -65,9 +118,10 @@ export default function ContactForm() {
         </p>
         <button
           type="submit"
-          className="min-w-[155px] shrink-0 bg-hel-pink2 px-[10px] py-[15px] font-body text-[20px] leading-none font-bold text-white uppercase transition-colors hover:bg-hel-purple md:text-[26px]"
+          disabled={submitting}
+          className="min-w-[155px] shrink-0 bg-hel-pink2 px-[10px] py-[15px] font-body text-[20px] leading-none font-bold text-white uppercase transition-colors hover:bg-hel-purple disabled:opacity-60 md:text-[26px]"
         >
-          Send
+          {submitting ? "Sending..." : "Send"}
         </button>
       </div>
     </form>
