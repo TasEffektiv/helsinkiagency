@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import LumoSaVideo from "@/components/LumoSaVideo";
 
 export const metadata: Metadata = {
   title: "Case Study | Lumo Energy South Australia | Helsinki",
@@ -26,8 +27,8 @@ export default function LumoSaPage() {
     <>
       <Header />
       <main className="bg-white">
-        <div className="px-5 pt-32 pb-10 text-center md:pt-44 md:pb-0">
-          <h1 className="mx-auto inline-block bg-hel-orange px-4 py-1.5 font-body text-[20px] leading-[28px] font-bold tracking-[2px] text-black uppercase md:px-9 md:text-[28px] md:leading-[55px]">
+        <div className="px-5 pt-[152px] pb-10 text-center md:max-nav:pt-[162px] nav:pt-[270px] md:pb-0">
+          <h1 className="mx-auto max-w-[1140px] bg-hel-orange px-4 py-1.5 font-body text-[20px] leading-[28px] font-bold tracking-[2px] text-black uppercase md:px-9 md:text-[28px] md:leading-[55px]">
             Lumo SA &ndash; Little World
           </h1>
         </div>
@@ -43,20 +44,7 @@ export default function LumoSaPage() {
           />
           <div className="relative z-10 mx-auto w-full max-w-[1160px]">
             <div className="mx-auto max-w-[824px]">
-              <video
-                className="aspect-video w-full bg-black shadow-2xl"
-                autoPlay
-                muted
-                controls
-                playsInline
-                preload="metadata"
-                controlsList="nodownload"
-              >
-                <source
-                  src="/lumo-sa/Lumo-Energy-SA_Brighter-SA-TVC.mp4"
-                  type="video/mp4"
-                />
-              </video>
+              <LumoSaVideo />
             </div>
           </div>
         </section>

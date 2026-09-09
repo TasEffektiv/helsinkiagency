@@ -26,13 +26,13 @@ export default function InstantScriptsPage() {
     <>
       <Header />
       <main className="bg-white">
-        <div className="px-5 pt-32 pb-10 text-center md:pt-44 md:pb-0">
-          <h1 className="mx-auto inline-block bg-hel-orange px-4 py-1.5 font-body text-[20px] leading-[28px] font-bold tracking-[2px] text-black uppercase md:px-9 md:text-[28px] md:leading-[55px]">
+        <div className="px-5 pt-[152px] pb-10 text-center md:max-nav:pt-[162px] nav:pt-[270px] md:pb-0">
+          <h1 className="mx-auto max-w-[1140px] bg-hel-orange px-4 py-1.5 font-body text-[20px] leading-[28px] font-bold tracking-[2px] text-black uppercase md:px-9 md:text-[28px] md:leading-[55px]">
             Instantscripts &ndash; 2 Million Hearts
           </h1>
         </div>
 
-        <section className="relative flex min-h-[264px] items-start justify-center overflow-hidden px-4 pt-10 pb-14 md:min-h-[543px] md:pt-16 md:pb-20 lg:min-h-[871px] lg:pt-24 lg:pb-24">
+        <section className="relative aspect-[1920/871] w-full overflow-hidden">
           <Image
             src="/instantscripts/instascript-header.png"
             alt=""
@@ -41,20 +41,18 @@ export default function InstantScriptsPage() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="relative z-10 mx-auto w-full max-w-[1160px]">
-            <div className="max-w-[878px]">
-              <video
-                className="aspect-video w-full bg-black shadow-2xl"
-                controls
-                preload="metadata"
-                controlsList="nodownload"
-              >
-                <source
-                  src="/instantscripts/InstantScripts_Here-for-You-24-7-INP30TV18AU_Compressed.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
+          <div className="absolute top-[12.74%] left-[27.92%] w-[45.89%]">
+            <video
+              className="aspect-video w-full bg-black"
+              controls
+              preload="metadata"
+              controlsList="nodownload"
+            >
+              <source
+                src="/instantscripts/InstantScripts_Here-for-You-24-7-INP30TV18AU_Compressed.mp4"
+                type="video/mp4"
+              />
+            </video>
           </div>
         </section>
 

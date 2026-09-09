@@ -95,10 +95,8 @@ export const projects: Project[] = [
     slug: "yarra-trams",
     title: "Yarra Trams - Rhino",
     client: "Yarra Trams",
-    image:
-      "https://www.helsinkiagency.com/wp-content/uploads/2024/04/yarr-trams-rhino-thumnail-image.png",
-    gridImage:
-      "https://www.helsinkiagency.com/wp-content/uploads/2024/04/yarr-trams-rhino-thumnail-image.png",
+    image: "/yarra-trams/yarr-trams-rhino-thumnail-image.png",
+    gridImage: "/yarra-trams/yarr-trams-rhino-thumnail-image.png",
     tagline: "Beware! A tram weighs as much as 30 rhinos!",
     labelColor: "#FFA300",
     challenge:
@@ -129,10 +127,8 @@ export const projects: Project[] = [
     slug: "be-kinder",
     title: "DOTP - Be Kinder",
     client: "Department of Transport & Planning",
-    image:
-      "https://www.helsinkiagency.com/wp-content/uploads/2025/03/DOTP-Be-Kinder.png",
-    gridImage:
-      "https://www.helsinkiagency.com/wp-content/uploads/2025/03/DOTP-Be-Kinder.png",
+    image: "/be-kinder/be-kinder-thumbnail.png",
+    gridImage: "/be-kinder/be-kinder-thumbnail.png",
     tagline: "A Reminder to be Kinder.",
     labelColor: "#FFA300",
     challenge:
@@ -146,10 +142,8 @@ export const projects: Project[] = [
     slug: "lumo-app",
     title: "Lumo - App Launch",
     client: "Lumo Energy",
-    image:
-      "https://www.helsinkiagency.com/wp-content/uploads/2025/03/Lumo-App-Launch-.png",
-    gridImage:
-      "https://www.helsinkiagency.com/wp-content/uploads/2025/03/Lumo-App-Launch-.png",
+    image: "/lumo-app/lumo-app-launch-thumbnail.png",
+    gridImage: "/lumo-app/lumo-app-launch-thumbnail.png",
     tagline: "One App, two States.",
     labelColor: "#FFA300",
     challenge:

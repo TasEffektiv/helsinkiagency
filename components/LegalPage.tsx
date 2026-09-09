@@ -3,27 +3,22 @@ import Footer from "@/components/Footer";
 
 export default function LegalPage({
   title,
-  updated,
   children,
 }: {
   title: string;
-  updated?: string;
   children: React.ReactNode;
 }) {
   return (
     <>
       <Header />
-      <main className="bg-black px-5 pt-40 pb-20 md:pt-48">
-        <div className="mx-auto max-w-[820px]">
-          <h1 className="mb-2 font-heading text-[28px] font-extrabold text-white uppercase md:text-[40px]">
+      <main className="bg-white pt-[112px] nav:pt-[170px]">
+        <div className="px-[15px] py-[22px] text-center md:px-5 md:pt-[50px] md:pb-5">
+          <h1 className="font-heading text-[28px] leading-[40px] font-extrabold text-black md:text-[36px] md:leading-[1.2]">
             {title}
           </h1>
-          {updated && (
-            <p className="mb-10 font-body text-[13px] text-white/50">
-              {updated}
-            </p>
-          )}
-          <div className="space-y-8 font-body text-[15px] leading-[28px] text-white/85 [&_a]:text-hel-pink2 [&_a]:underline [&_h2]:mb-2 [&_h2]:mt-8 [&_h2]:font-heading [&_h2]:text-[18px] [&_h2]:font-bold [&_h2]:text-white [&_h2]:uppercase [&_strong]:text-white">
+        </div>
+        <div className="mx-auto max-w-[1140px] px-[15px] pb-[60px]">
+          <div className="font-heading text-[16px] leading-[32px] text-black [&_a]:text-hel-pink [&_a:hover]:underline [&_h2]:mt-[40px] [&_h2]:mb-[15px] [&_h2]:text-[22px] [&_h2]:leading-[1.4] [&_h2]:font-extrabold [&_h2]:text-black [&_li]:mb-[10px] [&_p]:mb-[25px] [&_strong]:font-semibold [&_ul]:my-[25px] [&_ul]:list-disc [&_ul]:pl-[22px]">
             {children}
           </div>
         </div>

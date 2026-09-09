@@ -93,6 +93,7 @@ export default function Header() {
                 alt="Helsinki Agency"
                 width={208}
                 height={187}
+                sizes="(min-width: 1080px) 190px, 90px"
                 className={`absolute inset-0 h-full w-full object-contain transition-transform duration-100 ease-out ${
                   id === current
                     ? "translate-x-0"
@@ -109,6 +110,7 @@ export default function Header() {
               alt="Helsinki Agency"
               width={264}
               height={258}
+              sizes="(min-width: 1080px) 190px, 90px"
               className="absolute inset-0 h-full w-full object-contain"
               priority
             />

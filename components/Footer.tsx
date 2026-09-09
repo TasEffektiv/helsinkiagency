@@ -5,14 +5,14 @@ import BackToTop from "./BackToTop";
 
 export default function Footer() {
   return (
-    <footer id="contactus" className="bg-black px-5 pt-16 pb-8 md:pt-24">
-      <div className="mx-auto max-w-[1175px]">
-        <div className="mx-auto mb-16 max-w-[750px] bg-hel-cyan text-center md:mb-24">
-          <h2 className="px-4 py-3 font-body text-[22px] font-bold text-white uppercase md:text-[28px]">
-            Say hei (hello) to Helsinki
-          </h2>
-        </div>
+    <footer id="contactus" className="bg-black px-5 pb-8">
+      <div className="mx-auto mb-16 max-w-[750px] bg-hel-cyan text-center md:mb-24">
+        <h2 className="px-4 py-3 font-body text-[22px] font-bold text-white uppercase md:text-[28px]">
+          Say hei (hello) to Helsinki
+        </h2>
+      </div>
 
+      <div className="mx-auto max-w-[1175px]">
         <div className="grid grid-cols-1 gap-10 text-center sm:grid-cols-2 md:grid-cols-4 md:text-left">
           <div className="font-body text-[16px] leading-[32px] text-white">
             <p>

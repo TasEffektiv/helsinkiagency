@@ -33,6 +33,11 @@ export default async function ProjectPage({
   if (slug === "yarra-trams-villages") redirect("/yarra-trams-villages");
   if (slug === "lumo-sa") redirect("/lumo-sa");
   if (slug === "modeina-estate") redirect("/modeina-estate");
+  if (slug === "yarra-trams") redirect("/yarra-trams");
+  if (slug === "lightscape") redirect("/lightscape");
+  if (slug === "be-kinder") redirect("/be-kinder");
+  if (slug === "lumo-app") redirect("/lumo-app");
+  if (slug === "custom-plates") redirect("/custom-plates");
   const project = getProject(slug);
   if (!project) notFound();
 
@@ -43,6 +48,10 @@ export default async function ProjectPage({
     "yarra-trams-villages",
     "modeina-estate",
     "lumo-sa",
+    "yarra-trams",
+    "lightscape",
+    "be-kinder",
+    "lumo-app",
   ];
   const nextHref = dedicatedSlugs.includes(next.slug)
     ? `/${next.slug}`

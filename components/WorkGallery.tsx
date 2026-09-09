@@ -15,6 +15,10 @@ function Tile({
     "yarra-trams-villages",
     "modeina-estate",
     "lumo-sa",
+    "yarra-trams",
+    "lightscape",
+    "be-kinder",
+    "lumo-app",
   ];
   const href = dedicatedSlugs.includes(project.slug)
     ? `/${project.slug}`

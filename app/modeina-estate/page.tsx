@@ -26,8 +26,8 @@ export default function ModeinaEstatePage() {
     <>
       <Header />
       <main className="bg-white">
-        <div className="px-5 pt-32 pb-10 text-center md:pt-44 md:pb-0">
-          <h1 className="mx-auto inline-block bg-hel-orange px-4 py-1.5 font-body text-[20px] leading-[28px] font-bold tracking-[2px] text-black uppercase md:px-9 md:text-[28px] md:leading-[55px]">
+        <div className="px-5 pt-[152px] pb-10 text-center md:max-nav:pt-[162px] nav:pt-[270px] md:pb-0">
+          <h1 className="mx-auto max-w-[1140px] bg-hel-orange px-4 py-1.5 font-body text-[20px] leading-[28px] font-bold tracking-[2px] text-black uppercase md:px-9 md:text-[28px] md:leading-[55px]">
             Dennis Family Developments - Modeina Estate
           </h1>
         </div>
@@ -158,21 +158,21 @@ export default function ModeinaEstatePage() {
               alt="Modeina Estate Sales Centre exterior"
               width={353}
               height={353}
-              className="h-[190px] w-full object-cover object-center md:h-[353px]"
+              className="aspect-square w-full object-cover object-center"
             />
             <Image
               src="/modeina-estate/sc-exterior-2.png"
               alt="Modeina Estate Sales Centre exterior"
               width={353}
               height={353}
-              className="h-[190px] w-full object-cover object-center md:h-[353px]"
+              className="aspect-square w-full object-cover object-center"
             />
             <Image
               src="/modeina-estate/sc-exterior-3.png"
               alt="Modeina Estate Sales Centre exterior"
               width={353}
               height={353}
-              className="h-[190px] w-full object-cover object-center md:h-[353px]"
+              className="aspect-square w-full object-cover object-center"
             />
           </div>
         </section>
