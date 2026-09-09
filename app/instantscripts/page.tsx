@@ -45,7 +45,7 @@ export default function InstantScriptsPage() {
             <video
               className="aspect-video w-full bg-black"
               controls
-              preload="metadata"
+              preload="none"
               controlsList="nodownload"
             >
               <source

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   turbopack: {
     root: __dirname,
   },
@@ -15,8 +16,8 @@ const nextConfig: NextConfig = {
         hostname: "helsinkiagency.com",
       },
     ],
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    loader: "custom",
+    loaderFile: "./netlify-image-loader.ts",
   },
 };
 

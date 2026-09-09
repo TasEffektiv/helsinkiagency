@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+# Allow Netlify's Image CDN to fetch and transform the external
+# helsinkiagency.com images referenced via the custom next/image loader
+# (see netlify-image-loader.ts). Same-site assets under /public need no
+# entry here — Netlify Image CDN handles those automatically.
+[images]
+  remote_images = ["https://(www\\.)?helsinkiagency\\.com/.*"]
