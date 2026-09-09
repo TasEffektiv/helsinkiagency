@@ -55,7 +55,7 @@ function BigTile({ slug }: { slug: string }) {
   return (
     <Tile
       slug={slug}
-      className="h-[350px] w-full flex-[2] md:h-[749px]"
+      className="h-[350px] w-full md:h-[749px] md:flex-[2]"
     />
   );
 }
